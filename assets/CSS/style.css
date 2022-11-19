@@ -149,11 +149,8 @@ body.dark-theme{
   text-align: center;
 }
 .profile__perfil{
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(180deg,
-  hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
-  hsla(var(--hue), var(--sat), var(--lig), .2) 100%);
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -161,17 +158,21 @@ body.dark-theme{
   justify-content: center;
 }
 .profile__perfil img{
-  width: 75px;
+  width: 100% !important;
+  border-radius: 50% !important;
 }
 .profile__border{
   border: 3.5px solid var(--first-color);
   padding: 2px;
-  justify-self: center;
   width: 115px;
   height: 115px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
   margin-bottom: .75rem;
 }
 .profile__name{
@@ -223,6 +224,10 @@ body.dark-theme{
 }
 .profile__buttons-small{
   column-gap: .25rem;  
+}
+
+#profile__pic{
+  border-radius: 50% !important;
 }
 
 /*=============== BUTTON ===============*/

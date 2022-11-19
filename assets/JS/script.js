@@ -2,6 +2,17 @@
 const tabs = document.querySelectorAll('[data-target]')
 tabContents = document.querySelectorAll('[data-content]')
 
+window.addEventListener('load', () => {
+    fetch('https://api.github.com/users/harsh1x4')
+    .then((resp) => resp.json())
+    .then((data) => {
+        console.log(data);
+        document.getElementById('profile__profession').innerText = `${data.bio}`
+        document.getElementById('profile__pic').src = `${data.avatar_url}`
+    })
+})
+
+
 tabs.forEach(tab => {
     tab.addEventListener('click', () =>{
         const target = document.querySelector(tab.dataset.target)
