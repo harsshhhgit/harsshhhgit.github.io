@@ -82,7 +82,7 @@
 }
 
 @keyframes onePulse {
-    0%,100% {
+    0% {
         box-shadow: 0px 0px 0px 0px hsla(0,0%,100%,.1)
     }
     25%{
@@ -93,6 +93,9 @@
     }
     75% {
         box-shadow: 0px 0px 0px 6px hsla(0,0%,100%,.1);
+    }
+    100%{
+        box-shadow: 0px 0px 0px 3px hsla(0,0%,100%,.1);
     }
 }
 

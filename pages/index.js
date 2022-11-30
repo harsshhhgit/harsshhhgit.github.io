@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Social from './components/Social'
 import LightBar from './components/LightBar'
 import ProfileCard from './components/ProfileCard'
+import Details from './components/Details'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <LightBar />
       <div className={styles.container}>
         <ProfileCard/>
+        <Details/>
         <Social />
       </div>
     </>
