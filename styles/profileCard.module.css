@@ -21,11 +21,9 @@
 }
 
 .profile_image {
-    position: absolute;
-    right: 0;
     border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
+    display: block;
+    vertical-align: middle;
     margin: 10px;
     transition: .2s all ease-in-out;
 }
@@ -36,10 +34,9 @@
 }
 
 .profile_wrapper {
-    align-items: center;
-    flex-direction: row;
     display: flex;
     z-index: 10;
+    flex-direction: column;
     isolation: isolate;
 }
 
@@ -48,12 +45,14 @@
     transform-origin: 70% 70%;
     width: 3rem;
     height: 3rem;
-}
-
-.emoticon:hover {
     -webkit-animation: wave 2.5s linear 1;
     animation: wave 2.5s linear 1;
 }
+
+/* .emoticon:hover {
+    -webkit-animation: wave 2.5s linear 1;
+    animation: wave 2.5s linear 1;
+} */
 
 @keyframes wave {
 
@@ -83,19 +82,23 @@
 
 @keyframes onePulse {
     0% {
-        box-shadow: 0px 0px 0px 0px hsla(0,0%,100%,.1)
+        box-shadow: 0px 0px 0px 0px hsla(0, 0%, 100%, .1)
     }
-    25%{
-        box-shadow: 0px 0px 0px 6px hsla(0,0%,100%,.2);
+
+    25% {
+        box-shadow: 0px 0px 0px 6px hsla(0, 0%, 100%, .2);
     }
+
     50% {
-        box-shadow: 0px 0px 0px 12px hsla(0,0%,100%,.1);
+        box-shadow: 0px 0px 0px 12px hsla(0, 0%, 100%, .1);
     }
+
     75% {
-        box-shadow: 0px 0px 0px 6px hsla(0,0%,100%,.1);
+        box-shadow: 0px 0px 0px 6px hsla(0, 0%, 100%, .1);
     }
-    100%{
-        box-shadow: 0px 0px 0px 3px hsla(0,0%,100%,.1);
+
+    100% {
+        box-shadow: 0px 0px 0px 3px hsla(0, 0%, 100%, .1);
     }
 }
 
@@ -123,4 +126,24 @@
     line-height: 1.75rem;
     max-width: 32rem;
     margin: 0;
+}
+
+@media (min-width: 768px) {
+    .profile_wrapper {
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile_image {
+        top: 0;
+        right: 0;
+        height: 80px;
+        width: 80px;
+        margin: 16px;
+    }
+    .profile_img_link{
+        bottom: unset;
+    }
 }

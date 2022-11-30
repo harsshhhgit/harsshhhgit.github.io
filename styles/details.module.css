@@ -28,3 +28,12 @@
     margin: 0;
     padding: 0;
 }
+
+@media (max-width: 400px){
+    .details_wrapper h1{
+        font-size: 2.5rem;
+    }
+    .details{
+        margin: 2px;
+    }
+}
