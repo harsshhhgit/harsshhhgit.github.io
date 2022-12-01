@@ -54,6 +54,13 @@ h1,h2,h3,h4,h5,h6, li, a, div, p{
   --font-display: 'Poppins', var(--font-fallback);
 }
 
+@font-face {
+  font-family: Poppins;
+  font-display: block;
+  src: url(/fonts/Poppins.ttf) format('ttf');
+  font-weight: 400;
+}
+
 @keyframes appear{
   0%{
       opacity: 0;
