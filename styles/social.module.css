@@ -27,6 +27,8 @@
     z-index: 50 !important;
     bottom: 0 !important;
     right: 0!important;
+    animation: var(--appear);
+    animation-delay: .6s;
 }
 .social_list{
     list-style-type: none;
