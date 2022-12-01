@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300&family=Caveat:wght@400;500&family=Cedarville+Cursive&family=Cousine&family=Dosis:wght@200;400&family=Great+Vibes&family=Handlee&family=Hind&family=Homemade+Apple&family=Indie+Flower&family=Jost&family=Kalam:wght@300;400&family=Kaushan+Script&family=Kolker+Brush&family=Kristi&family=La+Belle+Aurore&family=Lobster&family=Marck+Script&family=Nothing+You+Could+Do&family=Nunito:wght@400;500;600;700;800&family=Pacifico&family=Pangolin&family=Patrick+Hand&family=Patrick+Hand+SC&family=Poppins:wght@200;300;400;500;600&family=Shadows+Into+Light&family=Source+Code+Pro:wght@300;400&family=Swanky+and+Moo+Moo&family=Ubuntu:wght@300&display=swap');
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Fira Mono', monospace;
+}
+
+.main_text {
+  animation: glitch 1s linear infinite;
+  font-size: 96px;
+  letter-spacing: -7px;
+}
+
+@keyframes glitch {
+
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.main_text:before,
+.main_text:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.main_text:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+.main_text:after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
+
+/* .btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #222;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: .2s all ease-in-out;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn:hover {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.btn_group{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* @media (prefers-color-scheme: light) {
+  .btn{
+    background: transparent;
+    color: #000;
+  }
+  .wrapper{
+    color: #000;
+    background: #fff;
+  }
+} */
