@@ -12,7 +12,7 @@ const Details = () => {
                         <li>Will be pursuing my bachelors.</li>
                         <li>Completed Higher Secondary Education from DAV.</li>
                     </ul>
-                    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quasi.</div>
+                    <div>A developer who creates random tools and projects just for fun and has a keen interest in world affairs.</div>
                 </div>
             </div>
         </>
