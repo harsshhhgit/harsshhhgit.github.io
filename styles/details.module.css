@@ -13,6 +13,8 @@
 .wave_svg{
     color: #9c9c9c;
     margin: 10px 0;
+    animation: var(--appear);
+    animation-delay: .4s;
 }
 .details{
     font-size: 1.125rem!important;

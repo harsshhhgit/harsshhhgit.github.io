@@ -3,11 +3,14 @@
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
     opacity: 1;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    background-color: rgba(0, 0, 0, .2);
+    /* background-color: rgba(0, 0, 0, .2); */
+    background-color: rgba(255, 255, 255, .015);
     padding: 1.5rem;
     border-radius: 0.5rem;
     position: relative;
     font-family: 'Poppins', sans-serif !important;
+    animation: var(--appear);
+    animation-delay: .2;
 }
 
 .profile_img_link {
