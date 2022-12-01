@@ -15,7 +15,7 @@ const ProfileCard = () => {
                     </span>
                     <div className={styles.head_wrapper}>
                         <h1 className={styles.head}>Namaste! I&apos;m Harshbardhan</h1>
-                        <p className={styles.sub_head} >I'm a 18-year-old Student, attending online classes.</p>
+                        <p className={styles.sub_head} >I&apos;m a 18-year-old Student, attending online classes.</p>
                     </div>
                 </div>
             </div>
