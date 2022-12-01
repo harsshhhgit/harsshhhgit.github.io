@@ -20,8 +20,6 @@
     transition-duration: .15s!important;
     padding: 0.25rem!important;
     display: inline-block!important;
-    animation: var(--appear);
-    animation-delay: .6s;
 }
 .social_wrapper{
     padding: 0.75rem 1rem;
