@@ -6,6 +6,7 @@ import LightBar from './components/LightBar'
 import ProfileCard from './components/ProfileCard'
 import Details from './components/Details'
 import Footer from './components/Footer'
+import Skills from './components/Skills'
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
       </Head>
       {/* <LightBar /> */}
       <div className={styles.container}>
-        <ProfileCard/>
-        <Details/>
+        <ProfileCard />
+        <Details />
+        <Skills />
         <Social />
       </div>
       {/* <Footer/> */}
