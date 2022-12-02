@@ -4,7 +4,7 @@ import css from '/public/custom-icons/css.svg'
 import html from '/public/custom-icons/html.svg'
 import github from '/public/custom-icons/github.svg'
 import js from '/public/custom-icons/js.svg'
-import vscode from '/public/custom-icons/vscode.svg'
+import vscode from '/public/custom-icons/VSCode.svg'
 import git from '/public/custom-icons/git.svg'
 
 const Skills = () => {
