@@ -10,7 +10,7 @@ const Details = () => {
                     <ul>
                         {/* <li>Currently Pursuing BSc from BITs Pilani</li> */}
                         <li>Will be pursuing my bachelors.</li>
-                        <li>Completed Higher Secondary Education from DAV.</li>
+                        <li>Completed Higher Secondary Education.</li>
                     </ul>
                     <div>A developer who creates random tools and projects just for fun and has a keen interest in world affairs.</div>
                 </div>
