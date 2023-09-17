@@ -8,7 +8,7 @@
     font-size: 3rem;
     line-height: 1.5;
     font-weight: 700;
-    color: rgb(234 234 234/1);
+    color: #ffffff;
 }
 .wave_svg{
     color: #9c9c9c;
@@ -24,6 +24,7 @@
     flex-direction: column;
     display: flex;
     align-items: flex-start!important;
+    color: hsla(0,0%,100%,.7);
 }
 .details ul{
     list-style: none;
