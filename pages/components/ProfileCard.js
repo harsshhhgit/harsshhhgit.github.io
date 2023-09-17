@@ -4,7 +4,7 @@ const ProfileCard = () => {
     return (
         <div className={styles.main}>
             <div className={styles.profile_card}>
-                <a href="https://github.com/harsh1x4" className={styles.profile_img_link} target="blank">
+                <a href="https://github.com/harsshhhgit" className={styles.profile_img_link} target="blank">
                     <Image src="/{harsh}small.png" width={75} height={75} alt="Basic Logo" className={styles.profile_image} draggable="false"></Image>
                     {/* <Image src="/bg.svg" width={100} height={100} alt="Basic Logo" className={styles.profile_image}></Image> */}
                 </a>
