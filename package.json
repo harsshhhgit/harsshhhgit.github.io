@@ -11,7 +11,12 @@
   "dependencies": {
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "next": "latest",
+    "clsx": "^2.0.0",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "framer-motion": "^10.16.4",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "eslint": "latest",
