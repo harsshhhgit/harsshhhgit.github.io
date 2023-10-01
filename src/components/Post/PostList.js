@@ -24,17 +24,15 @@ const PostList = () => {
     return (
         <div className={styles.all_post}>
             {postList.map((item, index) => (
-                <Link key={index}  href={`/`}>
-                    <div className={styles.single_item}>
-                        <div className={styles.post_head_data}>
-                            <h2>{item.title}</h2>
-                            <div className={styles.date}>
-                                <p>{item.publishedAt}</p>
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className={styles.svg}><path d="M5.25 12.75L12.75 5.25" stroke="#999999" strokeLinecap="round" strokeLinejoin="round"></path><path d="M5.25 5.25H12.75V12.75" stroke="#999999" strokeLinecap="round" strokeLinejoin="round"></path></svg>
-                            </div>
+                <Link className={styles.single_item} key={index} href={`/`}>
+                    <div className={styles.post_head_data}>
+                        <h2>{item.title}</h2>
+                        <div className={styles.date}>
+                            <span>{item.publishedAt}</span>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className={styles.svg}><path d="M5.25 12.75L12.75 5.25" stroke="#999999" strokeLinecap="round" strokeLinejoin="round"></path><path d="M5.25 5.25H12.75V12.75" stroke="#999999" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                         </div>
-                        <p>{item.description}</p>
                     </div>
+                    <span>{item.description}</span>
                 </Link>
             ))}
         </div>

@@ -22,11 +22,15 @@
     gap: .5rem;
     border-top: 1px solid var(--gray2);
     color: var(--gray1) !important;
-    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .single_item:hover{
     color: var(--gray0) !important;
+}
+
+.single_item:hover svg{
+transform: translateX(5px);
 }
 
 .post_head_data{
@@ -39,7 +43,7 @@
 .post_head_data h2{
     font-size: 1.125rem;
     line-height: 1.75rem;
-    color: var(--gray1) !important;
+    /* color: var(--gray1) !important; */
 }
 
 .post_head_data .date{
@@ -55,10 +59,12 @@
     transition-duration: 300ms;
 }
 
-.post_head_data  svg:hover{
-    transform: 0.25rem;
+.all_post  span{
+    font-size: 14px;
 }
 
-.all_post  p{
-    font-size: 14px;
+@media (max-width: 450px) {
+    .post_wrapper{
+        gap: 3.5rem;
+    }
 }
