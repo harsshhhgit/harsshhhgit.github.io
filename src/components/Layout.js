@@ -1,3 +1,5 @@
+import styles from '@css/common.module.css'
+
 export const Root = ({ children }) => (
-    <main>{children}</main>
+    <main className={styles.wrapper}>{children}</main>
 )

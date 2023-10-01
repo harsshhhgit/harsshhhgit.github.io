@@ -1,0 +1,39 @@
+.home_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.details_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.details_wrapper h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 400 !important;
+}
+
+.details_wrapper h2{
+    font-size: 14px;
+    line-height: 1.5rem;
+    max-width: 60ch;
+    width: auto;
+    color: var(--gray1);
+    font-weight: 400;
+}
+
+.details_wrapper strong {
+    color: var(--circle1);
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .home_wrapper {
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        gap: 3rem;
+    }
+}

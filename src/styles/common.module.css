@@ -1,0 +1,46 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    width: inherit;
+    gap: 5rem;
+    font-family: inherit;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    z-index: 40;
+    width: 100%;
+    font-size: 0.875rem !important;
+    color: var(--gray1);
+    gap: .5rem;
+}
+
+.nav_list{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    list-style: none;
+    font-size: 14px;
+}
+
+.activeStyle{
+    color: var(--gray0);
+}
+
+.nonActiveStyle{
+
+}
+
+.comment{
+    font-style: italic;
+    color: #777;
+}
+
+@media (min-width: 768px){
+    .header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

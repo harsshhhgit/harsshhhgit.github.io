@@ -6,10 +6,10 @@ export const inter = Inter({
     display: 'swap',
     variable: '--font-inter',
 })
-export const open_sans = Open_Sans({
+export const openSans = Open_Sans({
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-opensans',
+    variable: '--font-sans',
 })
 export const sohne = localFont({
     src: './sohne.woff2',
