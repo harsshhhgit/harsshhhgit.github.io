@@ -31,7 +31,7 @@ const Social = () => {
     ]
 
     return (
-        <ul className={styles.nav_list}>
+        <ul className={styles.nav_list} style={{flexWrap: 'wrap'}}>
             {socialLinks.map((link, index) => (
                 <>
                     <li key={index} aria-label={link.aria}><Link href={link.href}>{link.aria}</Link></li>
