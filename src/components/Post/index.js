@@ -1,6 +1,12 @@
+import styles from '@css/post.module.css'
+import PostList from './PostList'
+
 const Post = () => {
   return (
-    <div>Post</div>
+    <div className={styles.post_wrapper}>
+    <h1 className={styles.post_head}>Posts</h1>
+    <PostList/>
+    </div>
   )
 }
 

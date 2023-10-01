@@ -7,6 +7,7 @@ export const inter = Inter({
     variable: '--font-inter',
 })
 export const openSans = Open_Sans({
+    weight: ['300', '400', '500'],
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-sans',

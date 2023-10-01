@@ -1,5 +1,4 @@
 .circle1, .circle2{
-    z-index: -10;
     opacity: .5;
     border-radius: 9999px;
     position: fixed;

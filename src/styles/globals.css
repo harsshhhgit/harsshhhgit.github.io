@@ -32,8 +32,7 @@
   --tw-blursm: blur(150px);
 
   --font-fallback: var(--font-sans), -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 * {
@@ -54,7 +53,7 @@ html{
   font-feature-settings: normal;
   font-variation-settings: normal;
   -webkit-text-size-adjust: 100%;
-  font-family: var(--font-fallback);
+  /* font-family: var(--font-fallback); */
 }
 
 html,
@@ -69,7 +68,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--black);
-  font-family: var(--font-sans) !important;
+  /* font-family: var(--font-sans) !important; */
+  font-family: var(--font-fallback);
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 2rem;
