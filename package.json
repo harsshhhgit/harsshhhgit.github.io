@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "latest",
-    "react-dom": "latest",
-    "next": "latest",
-    "clsx": "^2.0.0",
+    "clsx": "^1.2.1",
+    "contentlayer": "^0.3.0",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "framer-motion": "^10.16.4",
+    "next": "latest",
+    "next-contentlayer": "^0.3.0",
+    "react": "latest",
+    "react-dom": "latest",
     "react-icons": "^4.11.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-code-titles": "^1.2.0",
@@ -23,10 +25,7 @@
     "rehype-prism-plus": "^1.5.1",
     "rehype-slug": "^5.1.0",
     "remark": "^14.0.2",
-    "remark-gfm": "^3.0.1",
-    "clsx": "^1.2.1",
-    "contentlayer": "^0.3.0",
-    "next-contentlayer": "^0.3.0"
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "latest",
