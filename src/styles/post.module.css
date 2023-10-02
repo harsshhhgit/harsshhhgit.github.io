@@ -43,7 +43,7 @@ transform: translateX(5px);
 .post_head_data h2{
     font-size: 1.125rem;
     line-height: 1.75rem;
-    /* color: var(--gray1) !important; */
+    /* color: var(--gray4) !important; */
 }
 
 .post_head_data .date{

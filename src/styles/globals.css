@@ -20,19 +20,20 @@
   --gray1: #a3a3a3;
   --gray2: #404040;
   --gray3: #b3b3b3;
+  --gray4: #dbdbdb;
   --mauve: #a855f7;
   --yellow: #eab308;
   --blue: #3b82f6;
   --pink: #f92aad;
   --green: #22c55e;
-  
-  
+
+
   --wrapper: 950px;
   --tw-blurlg: blur(350px);
   --tw-blursm: blur(150px);
 
   --font-fallback: var(--font-sans), -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
-  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 * {
@@ -49,7 +50,7 @@
   display: none;
 }
 
-html{
+html {
   font-feature-settings: normal;
   font-variation-settings: normal;
   -webkit-text-size-adjust: 100%;
@@ -82,7 +83,8 @@ a {
   transition: all .1s ease-in-out;
   text-decoration: none;
 }
-a:hover{
+
+a:hover {
   color: var(--gray0);
 }
 
@@ -91,7 +93,7 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   color: var(--gray0);
   font-weight: normal
 }
