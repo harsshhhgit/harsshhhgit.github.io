@@ -1,10 +1,10 @@
 import { Root } from '@/components/Layout'
-import Post from '@/components/Post'
+import Writing from '@/components/Writing'
 
 const Page = () => {
     return (
         <Root>
-            <Post />
+            <Writing />
         </Root>
     )
 }
