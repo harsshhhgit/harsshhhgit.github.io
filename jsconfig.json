@@ -6,6 +6,7 @@
       "@logic/*": ["./src/logic/*"],
       "@css/*": ["./src/styles/*"],
       "@components/*": ["./src/components/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": [
@@ -15,5 +16,5 @@
     "**/*.jsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
- ],
+  ],
 }
