@@ -2,7 +2,10 @@
 const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
     images: {
-        domains:["avatars.githubusercontent.com"]
+        remotePatterns:
+            [{ protocol: 'https', hostname: 'res.cloudinary.com' }
+            ],
+        domains: ['avatars.githubusercontent.com', 'res.cloudinary.com']
     },
     reactStrictMode: false,
 }

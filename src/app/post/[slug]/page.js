@@ -1,3 +1,4 @@
+import '@css/syntax.css'
 import Post from '@/components/Post'
 import { allPosts } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
@@ -9,7 +10,6 @@ export const generateStaticParams = () =>
 const Page = ({ params }) => {
     // console.log(`Param: ${params.slug}`) //post.slug === params.slug
     const post = allPosts.find((post) => post.slug.substring(6) === params.slug)
-    console.log(`Post: ${post}`)
     if (!post) notFound()
 
     return (
@@ -18,5 +18,12 @@ const Page = ({ params }) => {
         />
     )
 }
+
+{/* <PostImage
+  alt='Continental Hotel'
+  src='https://res.cloudinary.com/db1gjahs1/image/upload/v1696612710/continental.jpg'
+  width={1260}
+  height={705}
+/> */}
 
 export default Page

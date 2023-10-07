@@ -9,11 +9,11 @@ const Error = () => {
   // }
   return (
     <div className={styles.code_block_wrapper}>
-      <div className={styles.error_code_block}>
-        <div className={styles.error_code_heading}>
+      <div className={styles.code_block}>
+        <div className={styles.code_heading}>
           error.js
         </div>
-        <div className={styles.error_code_data}>
+        <div className={styles.code_data}>
           <span className={styles.comments}>// 404 page not found</span><br />
           <span className={styles.function}>function launch</span>
           <span className={styles.punctuation}>()&nbsp;</span>

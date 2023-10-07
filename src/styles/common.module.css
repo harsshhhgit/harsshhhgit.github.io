@@ -43,7 +43,7 @@
     /* width: 100%; */
 }
 
-.error_code_block{
+.code_block{
     color: var(--gray1);
     font-family: var(--font-mono);
     font-size: 12px;
@@ -51,13 +51,13 @@
     letter-spacing: .8px;
 }
 
-.error_code_heading{
+.code_heading{
     border: solid 1px var(--gray2);
     border-radius: 10px 10px 0 0;
     padding: 10px 0px 10px 15px;
 }
 
-.error_code_data{
+.code_data{
     padding: 15px;
     line-height: 20px;
     border-left: solid var(--gray2) 1px;
@@ -66,7 +66,7 @@
     border-radius: 0px 0px 10px 10px;
 }
 
-.error_code_data .comments{
+.code_data .comments{
     color: #777;
 }
 

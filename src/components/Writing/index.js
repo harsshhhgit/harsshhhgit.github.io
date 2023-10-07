@@ -7,8 +7,8 @@ const PostList = () => {
         <div className={styles.all_post}>
             {allPosts.map((post, index) => (
                 <Link className={styles.single_item} key={index} href={post.slug}>
-                    <div className={styles.post_head_data}>
-                        <span className={styles.post_title}>{post.title}</span>
+                    <div className={styles.si_head_data}>
+                        <span className={styles.si_title}>{post.title}</span>
                         <div className={styles.date}>
                             <span>{post.publishedAt}</span>
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className={styles.svg}><path d="M5.25 12.75L12.75 5.25" stroke="#999999" strokeLinecap="round" strokeLinejoin="round"></path><path d="M5.25 5.25H12.75V12.75" stroke="#999999" strokeLinecap="round" strokeLinejoin="round"></path></svg>
