@@ -91,6 +91,10 @@ a:hover {
   color: var(--gray0);
 }
 
+a:not(a.exclude):hover{
+  color: var(--gray0);
+}
+
 h1,
 h2,
 h3,
