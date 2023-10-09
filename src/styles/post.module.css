@@ -99,3 +99,24 @@
     height: 100%;
     border-radius: 12px;
 }
+
+.blog blockquote{
+    font-style: italic;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.blog blockquote p{
+    margin: 10px 0;
+}
+
+.blog blockquote::before{
+    display: block;
+    height: auto;
+    width: 0.50rem;
+    max-width: 1px;
+    --tw-bg-opacity: 1;
+    background-color: var(--circle1);
+    --tw-content: '';
+    content: var(--tw-content);
+}

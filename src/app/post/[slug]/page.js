@@ -25,5 +25,6 @@ const Page = ({ params }) => {
   width={1260}
   height={705}
 /> */}
+// ![Continental Hotel](https://res.cloudinary.com/db1gjahs1/image/upload/v1696612710/continental.jpg)
 
 export default Page
