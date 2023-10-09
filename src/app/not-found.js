@@ -14,7 +14,7 @@ const Error = () => {
           error.js
         </div>
         <div className={styles.code_data}>
-          <span className={styles.comments}>// 404 page not found</span><br />
+          <span className={styles.comments}>&#47;&#47; 404 page not found</span><br />
           <span className={styles.function}>function launch</span>
           <span className={styles.punctuation}>()&nbsp;</span>
           <span className={styles.punctuation}>&#123;</span>
@@ -30,11 +30,11 @@ const Error = () => {
           </span><br />
           <span>&emsp;&emsp;&emsp;&emsp;</span>
           <span className={styles.keywords}>throw</span>
-          <span className={styles.string}> "fuck off bitch!!!"</span>
+          <span className={styles.string}> &quot;fuck off bitch!!!&quot;</span>
           <br />
           &emsp;&emsp;<span className={styles.punctuation}>&#125;</span><br />
           <span className={styles.punctuation}>&#125;</span><br />
-          <span className={styles.comments}>// <Link href={`/`}>Go Home!</Link></span><br />
+          <span className={styles.comments}>&#47;&#47; <Link href={`/`}>Go Home!</Link></span><br />
         </div>
       </div>
     </div>
