@@ -13,10 +13,10 @@ export const metadata = {
   authors: [{ name: 'Harshbardhan Singh', url: 'https://harsshhh.xyz' }],
   colorScheme: 'dark',
   icons: {
-    icon: '/favicons/favicon.png',
-    shortcut: '/favicons/shortcut.png',
+    icon: '/favicons/avatar1.png',
+    shortcut: '/favicons/avatar1.png',
     apple: [
-      { url: '/favicons/apple-touch-icon.png' }
+      { url: '/favicons/avatar1.png' }
     ]
   },
   category: 'technology',

@@ -26,7 +26,7 @@ const Post = defineDocumentType(() => ({
         title: { type: 'string', required: true },
         description: { type: 'string', required: true },
         publishedAt: { type: 'string', required: true },
-        isPublished: { type: 'boolean', required: true }
+        isPublished: { type: 'boolean', required: true}
     },
     computedFields,
 }))
