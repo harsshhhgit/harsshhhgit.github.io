@@ -5,7 +5,7 @@ const nextConfig = {
         remotePatterns:
             [{ protocol: 'https', hostname: 'res.cloudinary.com' }
             ],
-        domains: ['avatars.githubusercontent.com', 'res.cloudinary.com']
+        domains: ['avatars.githubusercontent.com', 'github.com', 'res.cloudinary.com']
     },
     reactStrictMode: false,
 }
