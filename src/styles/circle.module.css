@@ -5,6 +5,7 @@
     filter: var(--tw-blursm);
     width: 150px;
     height: 150px;
+    z-index: -2;
 }
 
 .circle1{
