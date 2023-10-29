@@ -1,9 +1,0 @@
-<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="250" cy="250" r="250" fill="url(#paint0_angular_8_2)"/>
-<defs>
-<radialGradient id="paint0_angular_8_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 233) rotate(90) scale(267)">
-<stop/>
-<stop offset="1" stop-color="white"/>
-</radialGradient>
-</defs>
-</svg>
