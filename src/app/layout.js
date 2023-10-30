@@ -5,13 +5,25 @@ import Header from '@/components/Header'
 import BlurCircle from '@/components/BlurCircle'
 
 export const metadata = {
-  title: { default: 'Harshbardhan Singh', template: '%s — harsshhh' },
+  metadataBase: new URL('https://www.harsshhh.com'),
+  title: { 
+    default: 'Harshbardhan Singh', 
+    template: '%s — harsshhh' 
+  },
   creator: 'Harshbardhan Singh',
   publisher: 'Harshbardhan Singh',
   description: 'Software Engineer | Student',
   keywords: ['Harshbardhan Singh', 'harsshhhgit', 'harsshhh'],
-  authors: [{ name: 'Harshbardhan Singh', url: 'https://harsshhh.xyz' }],
+  authors: [{ name: 'Harshbardhan Singh', url: 'https://www.harsshhh.com' }],
   colorScheme: 'dark',
+  openGraph: {
+    title: 'Harshbardhan Singh',
+    description: 'Software Engineer | Student',
+    url: 'https://www.harsshhh.com',
+    siteName: 'Harshbardhan Singh',
+    locale: 'en_US',
+    type: 'website',
+  },
   icons: {
     icon: '/favicons/avatar1.png',
     shortcut: '/favicons/avatar1.png',
@@ -20,6 +32,14 @@ export const metadata = {
     ]
   },
   category: 'technology',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true
+    },
+  },
 }
 
 export default function RootLayout({ children }) {
