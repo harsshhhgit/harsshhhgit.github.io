@@ -1,0 +1,164 @@
+---
+title: 'Spring REST API'
+publishedAt: '2022-05-20'
+description: 'Discover the fundamentals of building a REST API for seamless CRUD Operations.'
+isPublished: true
+---
+
+# Spring Rest API
+<PostImage
+  alt='Spring REST API Initializer'
+  src='https://github.com/harsshhhgit/harsshhhgit.github.io/assets/93096721/275b7b6a-235b-4328-b168-a5cdf1f252fc'
+  width={3757}
+        height={563}
+/>
+The Spring REST API architecture is a layered architecture that consists of the following layers:
+- Presentation layer: This layer is responsible for handling the client requests and responses. It typically uses a web framework such as Spring MVC to render the responses to the clients.
+- Application layer: This layer contains the business logic of the application. It is responsible for processing the client requests and generating the appropriate responses. The application layer typically uses Spring Boot to simplify the development and deployment of the application.
+- Data access layer: This layer is responsible for interacting with the database to store and retrieve data. It typically uses Spring Data JPA to simplify the data access layer.
+
+Let's start by creating a new spring project from [Spring Initializer](start.spring.io). I'll be using Java 17 and maven to create this spring project. 
+<PostImage
+  alt='Spring REST API Initializer'
+  src='https://github.com/harsshhhgit/harsshhhgit.github.io/assets/93096721/61ac37d3-f1fa-48af-8936-f7af82a112f9'
+  width={1366}
+  height={718}
+/>
+### The dependencies used in this REST API project will be:
+- Spring Web
+- Lombok
+- Spring Data JPA
+- H2 Database
+- MySQL Driver
+
+## Model
+Model is the backbone of the applications data structure and it oftens mirrors the structure of the database. 
+It is used to transfer data between different layers of the application, such as the database, controller and the view. 
+
+Annotations Used -
+- @Data - This annotation is provided by Lombok. And it generates all the boilerplate code required for POJOs that includes getters-setters, toString etc.
+
+```java title="model/UserModel.java"
+@Data
+@Entity
+public class UserModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer userId;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private Integer age;
+}
+```
+
+## DAO(Repository)
+
+```java title="dao/UserRepository.java"
+public interface UserRepository extends JpaRepository<UserModel, Integer> {
+}
+```
+
+## Service
+
+```java title="service/UserService.java"
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+
+    public List<UserModel> getAllUser(){
+        return userRepository.findAll();
+    }
+
+    public String insertUser(UserModel user){
+        try {
+            userRepository.save(user);
+            return "Successfully Inserted";
+        }catch(Exception e){
+            return "Error Inserting";
+        }
+    }
+
+    public String deleteUser(Integer id){
+        try{
+            userRepository.deleteById(id);
+            return "Successfully Deleted";
+        }catch (Exception e){
+            return "Error Deleted";
+        }
+    }
+
+    public String updateUser(UserModel updateUser, Integer id) {
+        try{
+            UserModel existingUser = userRepository.findById(id).get();
+            existingUser.setFirstName(checkNull(updateUser.getFirstName(), existingUser.getFirstName()).toString());
+            existingUser.setLastName(checkNull(updateUser.getLastName(), existingUser.getLastName()).toString());
+            existingUser.setAge((Integer) checkNull(updateUser.getAge(), existingUser.getAge()));
+            existingUser.setEmail(checkNull(updateUser.getEmail(), existingUser.getEmail()).toString());
+            userRepository.save(existingUser);
+            return "Successfully Updated";
+        }catch (Exception e){
+            e.printStackTrace();
+            return "Error Updating";
+        }
+    }
+
+    private Object checkNull(Object NewData, Object existingData){
+        if(NewData == null){
+            return existingData;
+        }else {
+            return NewData;
+        }
+    }
+}
+```
+
+## Controller
+
+```java title="controller/UserController.java"
+@RestController
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/alluser")
+    public List<UserModel> getAllUser(){
+        return userService.getAllUser();
+    }
+
+    @PostMapping("/insertuser")
+    public String insertUser(@RequestBody UserModel user){
+        return userService.insertUser(user);
+    }
+
+    @DeleteMapping("/deleteuser/{id}")
+    public String deleteUser(@PathVariable Integer id){
+        return userService.deleteUser(id);
+    }
+
+    @DeleteMapping("/deleteuser")
+    public String deleteUserParam(@RequestParam Integer id){
+        return userService.deleteUser(id);
+    }
+
+    @PutMapping("/updateuser/{id}")
+    public String updateUser(@PathVariable Integer id, @RequestBody UserModel updateUser){
+        return userService.updateUser(updateUser, id);
+    }
+}
+```
+
+## Application Properties
+The _application.properties_ file is a configuration file used by Spring Boot applications. It contains properties that can be used to configure various aspects of the application, such as the database connection, logging, and security.
+```properties title="resources/application.properties"
+spring.datasource.url=jdbc:h2:mem:user_db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.h2.console.enabled=true
+
+logging.level.org.hibernate.SQL=DEBUG
+```
