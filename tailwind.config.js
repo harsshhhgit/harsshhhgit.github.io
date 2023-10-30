@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import { Config } from 'tailwindcss';
+import typography from '@tailwindcss/typography';
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,12 +10,21 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        opensans: ['var(--font-sans)'],
+        sohne: ['var(--font-sohne)'],
+        mono: ['var(--font-mono)'],
+        inter: ['var(--font-inter)']
+      },
+      typography: {
+        quoteless: {
+          css: {
+            'blockquote p:first-of-type::before': { content: 'none' },
+            'blockquote p:first-of-type::after': { content: 'none' },
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 }
